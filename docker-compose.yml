@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  crud_db:
+    image: mysql:latest    
+    container_name: crud_db
+
+    environment:
+      MYSQL_DATABASE: newsstand_db
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - newsstand_db_data:/var/lib/mysql
+
+  crud_pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+
+    environment:
+      PMA_HOST: crud_db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+
+    ports:
+      - 20001:80
+
+  crud_web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ./webapp/:/usr/webapp
+
+    ports:
+      - 5000:5000
+
+    #restart: always
+
+
+volumes:
+  newsstand_db_data:
+  
+
