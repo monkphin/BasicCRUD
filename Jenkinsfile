@@ -16,7 +16,7 @@ pipeline {
         steps{
             echo 'Testing Start'
                 sh 'pip install pytest'
-                sh + python3 test_app.py
+                sh '+ python3 test_app.py'
                 sh 'python3 -m pytest test.py'
         }}
 
