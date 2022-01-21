@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage ('build'){
         steps{
-            echo 'Build stage executed.'
-                sh 'docker-compose -f /var/lib/jenkins/workspace/BasicCRUD/docker-compose.yml up --build -d'
+            echo 'Build stage started.'
+                sh 'git pull https://github.com/monkphin/BasicCRUD.git'
+                sh 'docker-compose -f /var/lib/jenkins/workspace/QA_Project_main/docker-compose.yml up --build -d'
 
         }}
 
@@ -19,7 +20,7 @@ pipeline {
         stage ('Post Check'){
         steps{
                 echo'Stopping Microservices'
-                sh 'docker-compose -f /var/lib/jenkins/workspace/BasicCRUD/docker-compose.yml down'
+                sh 'docker-compose -f /var/lib/jenkins/workspace/QA_Project_main/docker-compose.yml down'
                 echo 'Microservices have stopped'
         }}
 
