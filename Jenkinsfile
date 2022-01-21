@@ -15,6 +15,7 @@ pipeline {
         stage ('test'){
         steps{
             echo 'Testing Start'
+                sh 'pip install flask'
                 sh 'pip install pytest'
                 sh 'python3 test.py'
                 sh 'python3 -m pytest test.py'
