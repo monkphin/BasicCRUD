@@ -1,5 +1,5 @@
 
-from webapp import app, tester
+from webapp import app
 import unittest
 
 
