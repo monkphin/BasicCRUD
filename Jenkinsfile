@@ -16,7 +16,7 @@ pipeline {
         steps{
             echo 'Testing Start'
                 sh 'pip install pytest'
-                sh 'python -m pytest webapp/test.py'
+                sh 'python -m pytest /webapp/test.py'
         }}
 
         stage ('Post Check'){
