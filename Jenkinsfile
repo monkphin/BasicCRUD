@@ -6,6 +6,8 @@ pipeline {
         steps{
             echo 'Build stage started.'
                 sh 'git pull https://github.com/monkphin/BasicCRUD.git'
+                sh 'docker kill $(docker ps -aq)'
+                sh 'docker rm $(docker ps -aq)'
                 sh 'docker-compose -f /var/lib/jenkins/workspace/QA_Project_main/docker-compose.yml up --build -d'
 
         }}
@@ -14,7 +16,7 @@ pipeline {
         steps{
             echo 'Testing Start'
                 sh 'pip install pytest'
-                sh 'python -m pytest test_app.py'
+                sh 'python -m pytest test.py'
         }}
 
         stage ('Post Check'){
