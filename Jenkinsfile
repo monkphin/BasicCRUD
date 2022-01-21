@@ -13,7 +13,6 @@ pipeline {
                 sh 'python -m pytest test_app.py'
             }
         }
-    }
     stage('Stop') {
             steps{
                 echo'Stop app has started'
@@ -21,4 +20,4 @@ pipeline {
                 echo 'app has stopped'
             }
         }
-}
+    }
