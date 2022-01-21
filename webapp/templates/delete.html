@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="w3-display-middle">
+
+    <div class="w3-container" style="opacity: 0.7;">
+
+        <form class="w3-xlarge" action="/delete" method="post">
+
+            
+            <br>                   
+            <input class="w3-input w3-border" type="text" name="name" placeholder="Name of Site">
+            <br> 
+            
+            
+            <button class="btn-lg w3-block w3-small" type="submit" style="opacity: 1;">Delete</button>                 
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+{% endblock %}
