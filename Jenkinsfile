@@ -1,24 +1,27 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
-            steps {
-                git 'https://github.com/monkphin/BasicCRUD.git'
+        stage ('build'){
+        steps{
+            echo 'Build stage executed.'
                 sh 'docker-compose -f /var/lib/jenkins/workspace/BasicCRUD/docker-compose.yml up --build -d'
-            }
-        }
-        stage('Test') {
-            steps {
+
+        }}
+
+        stage ('test'){
+        steps{
+            echo 'Testing Start'
                 sh 'pip install pytest'
                 sh 'python -m pytest test_app.py'
-            }
-        }
-    stage('Stop') {
-            steps{
-                echo'Stop app has started'
+        }}
+
+        stage ('Post Check'){
+        steps{
+                echo'Stopping Microservices'
                 sh 'docker-compose -f /var/lib/jenkins/workspace/BasicCRUD/docker-compose.yml down'
-                echo 'app has stopped'
-            }
-        }
+                echo 'Microservices have stopped'
+        }}
+
     }
 }
