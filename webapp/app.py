@@ -1,8 +1,8 @@
 from distutils.log import debug
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
-from werkzeug.utils import secure_filename
-from werkzeug.datastructures import  FileStorage
+from werkzeug.utils import secure_filename #Needed for future functionality
+from werkzeug.datastructures import  FileStorage #Needed for future functionality
 import os # needed for future functionality
 
 
