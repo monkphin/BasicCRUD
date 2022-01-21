@@ -13,7 +13,7 @@ pipeline {
         stage ('test'){
         steps{
             echo 'Testing Start'
-                sh 'sudo apt-get install python3-dev default-libmysqlclient-dev build-essential'
+                sh 'sudo apt-get install python3-dev default-libmysqlclient-dev build-essential -y'
                 sh 'pip install flask'
                 sh 'pip install flask-mysqldb'
                 sh 'pip install pytest'
