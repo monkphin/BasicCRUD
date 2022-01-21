@@ -7,13 +7,13 @@ class FlaskTestCase(unittest.TestCase):
 
     #check for html response 200
     def test_home(self):
-        tester = app.test_client(self)
+        tester = webapp.test_client(self)
         response = tester.get("/home")
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
 
-    def test_add_game(self):
-        tester = app.test_client(self)
+    def test_add_content(self):
+        tester = webapp.test_client(self)
         response = tester.get("/")
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
@@ -22,17 +22,17 @@ class FlaskTestCase(unittest.TestCase):
 
     # check if content is html
     def test_home_content(self):
-        tester = app.test_client(self)
+        tester = webapp.test_client(self)
         response = tester.get("/home")
         self.assertRegex(response.content_type, "html")
 
     # check returned data
     def test_home_data(self):
-        tester = app.test_client(self)
+        tester = webapp.test_client(self)
         response = tester.get("/home")
 
-    def test_add_games(self):
-        tester = app.test_client(self)
+    def test_add_content(self):
+        tester = webapp.test_client(self)
         response = tester.get("/add")
         self.assertTrue(b'Name of Site' in response.data)
         self.assertTrue(b'URL of Site' in response.data)
