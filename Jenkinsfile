@@ -21,5 +21,4 @@ pipeline {
                 echo 'app has stopped'
             }
         }
-    }
 }
