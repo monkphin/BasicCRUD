@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-        stage('Checkout') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/monkphin/BasicCRUD.git]])
-            }
-        }
         stage('Build') {
             steps {
                 git 'https://github.com/monkphin/BasicCRUD.git'
