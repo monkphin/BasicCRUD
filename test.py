@@ -26,10 +26,6 @@ class FlaskTestCase(unittest.TestCase):
         response = tester.get("/home")
         self.assertRegex(response.content_type, "html")
 
-    # check returned data
-    def test_home_data(self):
-        tester = app.test_client(self)
-        response = tester.get("/home")
 
     def test_add_content(self):
         tester = app.test_client(self)
