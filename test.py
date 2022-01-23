@@ -3,7 +3,7 @@ from webapp import app
 import unittest
 
 
-class FlaskTestCase(unittest.TestCase):
+class FlaskTest(unittest.TestCase):
 
     #check for html response 200
     def test_home(self):

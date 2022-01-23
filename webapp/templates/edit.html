@@ -3,6 +3,19 @@
 
 {% block content %}
 
+
+
+
+
+<span> News ID: {{ news_id }} </span>
+<form action="/sites/{{ id }}/edit" method="POST">
+  <p class="titles">Site Name:</p><input type="text" name="site_name">
+  <p class="titles">Site Address:</p><input type="text" name="site_url">
+  <input type="submit" value="Modify Entry">
+</form>
+
+
+<!--
 <div class="w3-display-middle">
 
     <div class="w3-container" style="opacity: 0.7;">
@@ -23,6 +36,7 @@
     </div>
 
 </div>
+-->
 
 
 

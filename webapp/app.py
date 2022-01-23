@@ -13,6 +13,9 @@ app.config['MYSQL_HOST'] = 'crud_db'
 app.config['MYSQ_PORT'] = 3306
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
+app.testing = True
+
+
 app.config['UPLOAD_FOLDER'] = 'UPLOAD_FOLDER'
 UPLOAD_FOLDER = '/static/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -31,10 +34,10 @@ def index():
     cursor.execute(f"use newsstand_db;")
     cursor.execute(f"SELECT * FROM `sites`;")
     cursor.execute(f"SELECT news.*, ed.* FROM sites AS news, editors AS ed WHERE ed.news_id = news.news_id;")
-    np_list = cursor.fetchall()
+    site_list = cursor.fetchall()
     cursor.close()
 
-    return render_template("index.html", len = len(np_list), np_list = np_list)
+    return render_template("index.html", len = len(site_list), site_list = site_list)
 
 
 
@@ -58,10 +61,23 @@ def add():
             mysql.connection.commit()                                            
             cursor.close()
         return render_template("add.html")
+
     return render_template("add.html")
 
 
+@app.route('/news/<id>/edit', methods=['GET', 'POST'])
+def edit(id):
+    return render_template('/edit.html', id=id)
 
+
+@app.route('/news/<id>/delete', methods=['GET', 'POST'])
+def edit(id):
+    if request.method == 'POST':
+        
+    return render_template('/edit.html', id=id)
+
+
+'''
 @app.route('/edit', methods=['POST', 'GET'])
 def edit():
     if request.method == 'POST':
@@ -78,7 +94,9 @@ def edit():
         cursor.close()
         return render_template("add.html")
     return render_template("edit.html")
+'''
 
+'''
 @app.route('/delete', methods=['POST', 'GET'])
 def delete():
     if request.method == 'POST':
@@ -95,9 +113,9 @@ def delete():
         cursor.close
         return render_template("delete.html")
     return render_template("delete.html")
+'''
 
-
-
+#to iumplement - for uploading of custom images. 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def uploader():
    if request.method == 'POST':
