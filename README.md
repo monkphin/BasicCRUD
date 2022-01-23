@@ -38,7 +38,7 @@ In order to develop the Application I have been running an Ubuntu Server VM on a
 
 The applicaiton is written in a mix of Python and HTML, utilising JINJA asa method of passing data between the front end and back end, in order to have the content read or written from a MySQL DB. The WebApp, MySQL DB and an Instance of PHPMyAdmin are all running on their own Docker containers, which are spun up using a docker-compose file and a dockerbuild file. To ensure the MySQL DB data is not lost when stopping the DB container, a Docker Volume is ceated to give permanance to the data stroed to the DB. 
 
-![Simple SQL Table relationships. ](http://url/to/img.png)
+![Simple SQL Table relationships. ](https://github.com/monkphin/BasicCrud/blob/main/simple_db.png?raw=true)
 
 Stripping back the amount of tables in use allowed for a much simpler design overall, which sped up my ability to get core functionality in place. 
 
