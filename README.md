@@ -56,5 +56,9 @@ As such Jenkins is showing expected failures on stage 3, where unit testing is t
 
 The app is currently live and running on containers hosted in the previously mentioned Ubuntu Server VM on a Baremetal Hypervisor, and is able to be accessed using NginX Reverse Proxying at the following URL: https://news.dasburros.co.uk where functionality can be tested on a live and working platform - please be aware that their is a known issue with the edit function, which I intend to resolve in the near future. 
 
+A video demo of the current build of the app can be found here. 
+https://youtu.be/kDdtcI4HiRY
+
+
 
 Going forwards, I have longer term plans for my own application, where I plan to add additional functionality, such as tracking a paint collection, creating painting recipes - both for colour mixing and also actual miniature painting. An army builder, for various table top games, combined with rules for each unit, pulled form a third partysource (Wahapedia), in the form of Excel Files, which will be pulled when a change to the content is detected. I also intend to add a picture library for compeleted miniatures as well as a potential blog facility and methods to allow users to interact with each other - something i anticiapte to be an ongoing endevour where development is concerned. 
