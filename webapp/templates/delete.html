@@ -6,18 +6,15 @@
 <div class="w3-display-middle">
 
     <div class="w3-container" style="opacity: 0.7;">
+        {% for news_id in delete_list %}
+            Are you sure you want to delete {{ site_name }}?
+            <form action="/sites/{{ id }}/delete" method="POST">
+                <button class="btn-lg w3-block w3-small" type="submit" style="opacity: 1;">Confirm</button>                 
+            </form>            
+            <a href="/home"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Cancel</button></a> 
+        {% endfor %}
 
-        <form class="w3-xlarge" action="/delete" method="post">
-
-            
-            <br>                   
-            Confirm Deletion of {{ list['news_name'] }}
-            <br> 
-            
-            <button class="btn-lg w3-block w3-small" type="submit" style="opacity: 1;">Confirm</button>                 
-            <a href="/index"><button class="btn-lg w3-block w3-small" type="reset" style="opacity: 1;">Cancel</button></a> 
-        </form>
-
+        
     </div>
 
 </div>
