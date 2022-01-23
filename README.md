@@ -21,7 +21,11 @@ Initial planning took place over several days, outlining such things as users st
 Tools such as Miro and Jira were used to facilitate the planning of the project, with screen grabs from the planning phase shown below. 
 
 ![Miro Board for User Journeys, MoSCoW, etc. ](https://github.com/monkphin/BasicCrud/blob/main/miro.png?raw=true)
-![Jira for KANBAN and Sprint planning.](https://github.com/monkphin/BasicCrud/blob/main/jira.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 1.](https://github.com/monkphin/BasicCrud/blob/main/Jira_planning.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 2.](https://github.com/monkphin/BasicCrud/blob/main/Jira_basic_function.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 3.](https://github.com/monkphin/BasicCrud/blob/main/Jira_core_function.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 4.](https://github.com/monkphin/BasicCrud/blob/main/Jira_enhanced_core.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 5.](https://github.com/monkphin/BasicCrud/blob/main/Jira_post.png?raw=true)
 
 Once the intial planning was done with, I could start to design the core functionality of the app - based off of the priorities and needs outlined by the user stories and MoSCoW, I was able to designthe below SQL DB, where I would have user credneitals, for login information, User data, for less sensitive data such as names, etc. Then two tables for the specific user data content, specifically the Colleciton list and the tbale used to segment content by game system, publisher etc. 
 
