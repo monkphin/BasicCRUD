@@ -20,12 +20,12 @@ Initial planning took place over several days, outlining such things as users st
 
 Tools such as Miro and Jira were used to facilitate the planning of the project, with screen grabs from the planning phase shown below. 
 
-![Miro Board for User Journeys, MoSCoW, etc. ](https://github.com/monkphin/BasicCrud/blob/main/miro.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 1.](https://github.com/monkphin/BasicCrud/blob/main/Jira_planning.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 2.](https://github.com/monkphin/BasicCrud/blob/main/Jira_basic_function.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 3.](https://github.com/monkphin/BasicCrud/blob/main/Jira_core_function.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 4.](https://github.com/monkphin/BasicCrud/blob/main/Jira_enhanced_core.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 5.](https://github.com/monkphin/BasicCrud/blob/main/Jira_post.png?raw=true)
+![Miro Board for User Journeys, MoSCoW, etc. ](https://github.com/monkphin/BasicCrud/blob/main/readme_img/miro.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 1.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_planning.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 2.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_basic_function.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 3.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_core_function.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 4.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_enhanced_core.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 5.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_post.png?raw=true)
 
 Once the intial planning was done with, I could start to design the core functionality of the app - based off of the priorities and needs outlined by the user stories and MoSCoW, I was able to designthe below SQL DB, where I would have user credneitals, for login information, User data, for less sensitive data such as names, etc. Then two tables for the specific user data content, specifically the Colleciton list and the tbale used to segment content by game system, publisher etc. 
 
@@ -42,7 +42,7 @@ In order to develop the Application I have been running an Ubuntu Server VM on a
 
 The applicaiton is written in a mix of Python and HTML, utilising JINJA asa method of passing data between the front end and back end, in order to have the content read or written from a MySQL DB. The WebApp, MySQL DB and an Instance of PHPMyAdmin are all running on their own Docker containers, which are spun up using a docker-compose file and a dockerbuild file. To ensure the MySQL DB data is not lost when stopping the DB container, a Docker Volume is ceated to give permanance to the data stroed to the DB. 
 
-![Simple SQL Table relationships. ](https://github.com/monkphin/BasicCrud/blob/main/simple_db.png?raw=true)
+![Simple SQL Table relationships. ](https://github.com/monkphin/BasicCrud/blob/main/readme_img/simple_db.png?raw=true)
 
 Stripping back the amount of tables in use allowed for a much simpler design overall, which sped up my ability to get core functionality in place. 
 
@@ -52,7 +52,7 @@ As it stands, the app still has some issues, which I am ironing out, specificall
 
 As such Jenkins is showing expected failures on stage 3, where unit testing is to be performed, which prevents it starting stage 4, where the containers would be torn down. This being said, since Jenkins and Unit testing was rushed on the course, its not somethingI have enough insight to, to be able to pick up and work with, with minimal time left available to me, so suspect I would have potentially had failures from the Unit testing phase anyway. 
 
-![Jenkins Stage View. ](https://github.com/monkphin/BasicCrud/blob/main/jenkins.png?raw=true)
+![Jenkins Stage View. ](https://github.com/monkphin/BasicCrud/blob/main/readme_img/jenkins.png?raw=true)
 
 The app is currently live and running on containers hosted in the previously mentioned Ubuntu Server VM on a Baremetal Hypervisor, and is able to be accessed using NginX Reverse Proxying at the following URL: https://news.dasburros.co.uk where functionality can be tested on a live and working platform - please be aware that their is a known issue with the edit function, which I intend to resolve in the near future. 
 
