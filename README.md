@@ -20,12 +20,12 @@ Initial planning took place over several days, outlining such things as users st
 
 Tools such as Miro and Jira were used to facilitate the planning of the project, with screen grabs from the planning phase shown below. 
 
-![Miro Board for User Journeys, MoSCoW, etc. ](http://url/to/img.png)
-![Jira for KANBAN and Sprint planning.](http://url/to/img.png)
+![Miro Board for User Journeys, MoSCoW, etc. ](https://github.com/monkphin/BasicCrud/blob/main/miro.png?raw=true)
+![Jira for KANBAN and Sprint planning.](https://github.com/monkphin/BasicCrud/blob/main/jira.png?raw=true)
 
 Once the intial planning was done with, I could start to design the core functionality of the app - based off of the priorities and needs outlined by the user stories and MoSCoW, I was able to designthe below SQL DB, where I would have user credneitals, for login information, User data, for less sensitive data such as names, etc. Then two tables for the specific user data content, specifically the Colleciton list and the tbale used to segment content by game system, publisher etc. 
 
-![SQL Table relationships. ](http://url/to/img.png)
+![SQL Table relationships. ](https://github.com/monkphin/BasicCrud/blob/main/SQL_relationship_tables.png?raw=true)
 
 As I Was working on the project, it gradually became apprarent that I had perhaps bitten off more than I could chew, in terms of the amount of time we had available to us due to various disruptions caused by missing tutors, having no less than 7 tutors on a 9 week course each with their own learning styles and often no real information as to what we had covered previously, as well as periodic disruptions caused by a tutor having to oftne given 1:1 help, sometimes running into an hour or two of time each day, the final projet was also something that the class had to take the lead on due to the tutor not really being informed of this aspect (Not his fault at all) - combine this with working a full time job alongside the course and it becomes apparent why I was having issues with completing my own project in the time alloted. So would unliely be able to complete this in time fot he end of the course. (At this stage we were looking at around 1 week left to the cut off date.) Rather than completely abandon it, it is going to continue to be worked on as a long term project, allowing me to take my skills development further with no time constraints in terms fo a completion date. This project cn be found here: https://github.com/monkphin/FlaskAPP
 
@@ -48,7 +48,7 @@ As it stands, the app still has some issues, which I am ironing out, specificall
 
 As such Jenkins is showing expected failures on stage 3, where unit testing is to be performed, which prevents it starting stage 4, where the containers would be torn down. This being said, since Jenkins and Unit testing was rushed on the course, its not somethingI have enough insight to, to be able to pick up and work with, with minimal time left available to me, so suspect I would have potentially had failures from the Unit testing phase anyway. 
 
-![Jenkins Stage View. ](http://url/to/img.png)
+![Jenkins Stage View. ](https://github.com/monkphin/BasicCrud/blob/main/jenkins.png?raw=true)
 
 The app is currently live and running on containers hosted in the previously mentioned Ubuntu Server VM on a Baremetal Hypervisor, and is able to be accessed using NginX Reverse Proxying at the following URL: https://news.dasburros.co.uk where functionality can be tested on a live and working platform - please be aware that their is a known issue with the edit function, which I intend to resolve in the near future. 
 
