@@ -54,16 +54,16 @@ def add():
             cursor.execute(f"INSERT INTO `sites`  (`news_name`, `news_url`) VALUES ('{Name}','{Site}');")
             mysql.connection.commit()     
 
-            '''     Begin hacky method to autopopulate the foreign key in editors     '''      
+            '''     Begin hacky method to populate the foreign key in editors table     '''      
             cursor.execute(f" SELECT news_id from `sites` WHERE  news_name = '{Name}'")
             News_id = cursor.fetchone ()
             News_int = News_id["news_id"]
             cursor.execute(f"INSERT INTO `editors` (news_id, ed_fname, ed_lname, ed_date) VALUES ('{News_int}', '{ed_firstname}', '{ed_lastname}', '{ed_datestarted}');")
             mysql.connection.commit()                                            
             cursor.close()
-            '''     End hacky method to autopopulate the foreign key in editors      '''      
+            '''     End hacky method to populate the foreign key in editors table      '''      
 
-        return render_template("add.html")
+        return redirect('/home')
 
     return render_template("add.html")
 

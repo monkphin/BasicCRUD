@@ -5,90 +5,80 @@
 
     <div class="w3-row-padding w3-margin-top">
         <div class="w3-container" align="center">
-            <h2>UK News</h2>
+            <h2>Sites List</h2>
         </div>
         {% for i in range(0, len -9) %}
-        <a href="{{ site_list[i]['news_url'] }}" target="_blank">
+        <a href="{{ site_list[i]['news_url'] }}" target="_blank"></a>
+
             <div class="w3-third">
                 <div class="w3-card-2">
                     <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                     <div class="w3-container">
                         <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                        <h5>Since:({{ site_list[i]['ed_date'] }})</h5>
                         <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
                         <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
                     
                     </div>
                 </div>
             </div>
-        </a>
         {% endfor %}
     </div>
 
 <div class="w3-row-padding w3-margin-top">
-    <div class="w3-container" align="center">
-        <h2>Tech News</h2>
-    </div>
+
 {% for i in range(3, len -6) %}
-<a href="{{ site_list[i]['news_url'] }}" target="_blank">
+<a href="{{ site_list[i]['news_url'] }}" target="_blank"></a>
 <div class="w3-third">
     <div class="w3-card-2">
         <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
         <div class="w3-container">
             <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+            <h5>Since:({{ site_list[i]['ed_date'] }})</h5>
             <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
             <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
         </div>
     </div>
 </div>
-</a>
 {% endfor %}
+</div>
 
 <div class="w3-row-padding w3-margin-top">
-    <div class="w3-container" align="center">
-        <h2>IT News</h2>
-    </div>
+
     {% for i in range(6, len -3) %}
-    <a href="{{ site_list[i]['news_url'] }}" target="_blank">
+    <a href="{{ site_list[i]['news_url'] }}" target="_blank"></a>
+
         <div class="w3-third">
             <div class="w3-card-2">
                 <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                    <h5>Since:({{ site_list[i]['ed_date'] }})</h5>
                     <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
                     <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
                 </div>
             </div>
         </div>
-        </a>
     {% endfor %}
 </div>
 
 <div class="w3-row-padding w3-margin-top">
-    <div class="w3-container" align="center">
-        <h2>Local News</h2>
-    </div>
+
     {% for i in range(9, len) %}
-    <a href="{{ site_list[i]['news_url'] }}" target="_blank">
+    <a href="{{ site_list[i]['news_url'] }}" target="_blank"></a>
+
         <div class="w3-third">
             <div class="w3-card-2">
                 <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
-                    <a href ="/{{ site_list[i]['news_id'] }}/edit">edit</a>
+                    <h5>Since:({{ site_list[i]['ed_date'] }})</h5>
+                    <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
                     <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
                 </div>
             </div>
         </div>
-        </a>
     {% endfor %}
-</div>
-
-<div class="w3-row-padding w3-margin-top">
-    <div class="w3-container" align="center">
-        <h2>Other News</h2>
-    </div>
-    {% for i in range(12, len) %}
-    {% endfor %}
-</div>   
+</div> 
 
 {% endblock %}
