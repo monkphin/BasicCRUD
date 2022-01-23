@@ -65,55 +65,33 @@ def add():
     return render_template("add.html")
 
 
-@app.route('/news/<id>/edit', methods=['GET', 'POST'])
-def edit(id):
-    return render_template('/edit.html', id=id)
-
-
-@app.route('/news/<id>/delete', methods=['GET', 'POST'])
+@app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit(id):
     if request.method == 'POST':
-        
-    return render_template('/edit.html', id=id)
-
-
-'''
-@app.route('/edit', methods=['POST', 'GET'])
-def edit():
-    if request.method == 'POST':
+        Name= request.form['name']
+        Site = request.form['url']
         cursor = mysql.connection.cursor()
-        cursor.execute(f"use newsstand_db;")
-        Name = request.form['name']
-        ed_firstname = request.form['ed_firstname']
-        ed_lastname = request.form['ed_lastname']
-        ed_datestarted = request.form['ed_datestarted']
-        news_id = cursor.execute(f"SELECT news_id FROM `sites` WHERE '{Name}'")
-        mysql.connection.commit()
-        cursor.execute(f"UPDATE `editors` SET `ed_date`='{ed_datestarted}' WHERE `news_id`='{news_id}';")
-        mysql.connection.commit()
+        cursor.execute(f"use newsstand_db;") 
+        cursor.execute(f"UPDATE `sites` SET `news_name` = '{Name}', `news_url` = '{Site}' WHERE `sites`.`news_id` = '{id}'") 
+        mysql.connection.commit()                                            
         cursor.close()
-        return render_template("add.html")
-    return render_template("edit.html")
-'''
+    return render_template('/edit.html', id=id)
 
-'''
-@app.route('/delete', methods=['POST', 'GET'])
-def delete():
+
+@app.route('/delete/<id>', methods=['GET', 'POST'])
+def delete(id):
     if request.method == 'POST':
         cursor = mysql.connection.cursor()
-        cursor.execute(f"use newsstand_db;")
-        Name = request.form['name']
-        cursor.execute(f" SELECT news_id from `sites` WHERE  news_name = '{Name}';")
-        News_id = cursor.fetchone ()
-        News_int = News_id["news_id"]
-        cursor.execute(f"DELETE from `editors` WHERE news_id = '{News_int}';") 
-        mysql.connection.commit()
-        cursor.execute(f"DELETE from `sites` WHERE news_id = '{News_int}';")
-        mysql.connection.commit()
+        cursor.execute(f"use newsstand_db;")  
+        cursor.execute(f"SELECT news_name FROM sites WHERE news_id = {'id'}") 
+        list = cursor.fetchall()
         cursor.close
-        return render_template("delete.html")
-    return render_template("delete.html")
-'''
+        cursor = mysql.connection.cursor()
+        cursor.execute(f"use newsstand_db;") 
+        cursor.execute(f"DELETE FROM `sites` WHERE `sites`.`news_id` = {'id'}'")
+        mysql.connection.commit()                                            
+        cursor.close()
+    return render_template('/delete.html', list=list, id=id)
 
 #to iumplement - for uploading of custom images. 
 @app.route('/uploader', methods = ['GET', 'POST'])

@@ -14,11 +14,8 @@
                     <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                     <div class="w3-container">
                         <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                        <form action="/edit/{{ site_list[i]['news_id'] }}" method=["GET"]><input id="edit" type="submit" value="Edit"></form> <form action="/delete/{{ site_list[i]['news_id'] }}"><input id="delete" type="submit" method="POST" value="Delete"></form></p>
                     </div>
-                    <div>
-                        <form action="/news/{{ site_list[i]['news_id'] }}/edit" method=["GET"]><input id="edit" type="submit" value="Edit"></form> <form action="/news/{{ site_list[i]['news_id'] }}/delete"><input id="delete" type="submit" method="POST" value="Delete"></form></p>
-                    </div>
-
                 </div>
             </div>
         </a>
@@ -36,6 +33,7 @@
         <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
         <div class="w3-container">
             <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+            <form action="/edit/{{ site_list[i]['news_id'] }}" method=["GET"]><input id="edit" type="submit" value="Edit"></form> <form action="/delete/{{ site_list[i]['news_id'] }}"><input id="delete" type="submit" method="POST" value="Delete"></form></p>
         </div>
     </div>
 </div>
@@ -53,6 +51,7 @@
                 <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                    <form action="/edit/{{ site_list[i]['news_id'] }}" method=["GET"]><input id="edit" type="submit" value="Edit"></form> <form action="/delete/{{ site_list[i]['news_id'] }}"><input id="delete" type="submit" method="POST" value="Delete"></form></p>
                 </div>
             </div>
         </div>
@@ -71,6 +70,7 @@
                 <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                    <form action="/edit/{{ site_list[i]['news_id'] }}" method=["GET"]><input id="edit" type="submit" value="Edit"></form> <form action="/delete/{{ site_list[i]['news_id'] }}"><input id="delete" type="submit" method="POST" value="Delete"></form></p>
                 </div>
             </div>
         </div>
