@@ -22,7 +22,7 @@ Tools such as Miro and Jira were used to facilitate the planning of the project,
 
 ![Miro Board for User Journeys, MoSCoW, etc. ](https://github.com/monkphin/BasicCrud/blob/main/readme_img/miro.png?raw=true)
 ![Jira for KANBAN and Sprint planning, showing sprint 1.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_planning.png?raw=true)
-![Jira for KANBAN and Sprint planning, showing sprint 2.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_basic_function.png?raw=true)
+![Jira for KANBAN and Sprint planning, showing sprint 2.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/jira_basic_function.png?raw=true)
 ![Jira for KANBAN and Sprint planning, showing sprint 3.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_core_function.png?raw=true)
 ![Jira for KANBAN and Sprint planning, showing sprint 4.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_enhanced_core.png?raw=true)
 ![Jira for KANBAN and Sprint planning, showing sprint 5.](https://github.com/monkphin/BasicCrud/blob/main/readme_img/Jira_post.png?raw=true)
