@@ -3,50 +3,52 @@
 {% block content %}
 
 
-    <div class="w3-row-padding w3-margin-top">
-        <div class="w3-container" align="center">
-            <h2>Sites List</h2>
-        </div>
-        {% for i in range(0, len -9) %}
-        <a href="{{ site_list[i]['news_url'] }}" target="_blank">
+<div class="w3-row-padding w3-margin-top">
+    <div class="w3-container" align="center">
+        <h2>Sites List</h2>
+    </div>
+    {% for i in range(0, len -9) %}
+    <a href="{{ site_list[i]['news_url'] }}" target="_blank">
 
-            <div class="w3-third">
-                <div class="w3-card-2">
-                    <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
+        <div class="w3-third">
+            <div class="w3-card-2">
+                <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
+                <div class="w3-container">
+                    <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                    <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
                     <div class="w3-container">
-                        <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
-                        <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
-                        <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
-                        <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
-                    
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/edit"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Edit</button></a>
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/delete"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Delete</button></a>
                     </div>
                 </div>
             </div>
-        </a>
-        {% endfor %}
-    </div>
-
-<div class="w3-row-padding w3-margin-top">
-
-{% for i in range(3, len -6) %}
-<a href="{{ site_list[i]['news_url'] }}" target="_blank">
-<div class="w3-third">
-    <div class="w3-card-2">
-        <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
-        <div class="w3-container">
-            <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
-            <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
-            <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
-            <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
         </div>
-    </div>
-</div>
-</a>
-{% endfor %}
+    </a>
+        {% endfor %}
 </div>
 
 <div class="w3-row-padding w3-margin-top">
+    {% for i in range(3, len -6) %}
+    <a href="{{ site_list[i]['news_url'] }}" target="_blank">
 
+        <div class="w3-third">
+            <div class="w3-card-2">
+                <img src="{{ site_list[i]['news_img_url'] }}" style="width:100%">
+                <div class="w3-container">
+                    <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
+                    <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
+                    <div class="w3-container">
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/edit"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Edit</button></a>
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/delete"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Delete</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="w3-row-padding w3-margin-top">
     {% for i in range(6, len -3) %}
     <a href="{{ site_list[i]['news_url'] }}" target="_blank">
 
@@ -56,8 +58,10 @@
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
                     <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
-                    <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
-                    <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
+                    <div class="w3-container">
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/edit"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Edit</button></a>
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/delete"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Delete</button></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,8 +80,10 @@
                 <div class="w3-container">
                     <h4>{{ site_list[i]['news_name'] }} -  Chief Editor: ({{ site_list[i]['ed_fname'] }}  {{ site_list[i]['ed_lname'] }})</h4>
                     <h5>Editor Since:({{ site_list[i]['ed_date'] }})</h5>
-                    <a href ="/sites/{{ site_list[i]['news_id'] }}/edit">edit</a>
-                    <a href ="/sites/{{ site_list[i]['news_id'] }}/delete">delete</a>
+                    <div class="w3-container">
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/edit"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Edit</button></a>
+                        <a href ="/sites/{{ site_list[i]['news_id'] }}/delete"><button class="btn-lg w3-block w3-small" type="button" style="opacity: 1;">Delete</button></a>
+                    </div>
                 </div>
             </div>
         </div>
