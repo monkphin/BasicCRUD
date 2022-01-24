@@ -2,20 +2,23 @@
 
 
 {% block content %}
-<div  class="w3-container" style="opacity: 0.7;">
-<form action="/sites/{{id}}/edit/" method="POST">
+<div class="w3-display-middle">
 
-  {% for news_id in edit_list %}
-  <p class="titles">Site Name:</p><input type="text" name="new_name" placeholder="{{ site_name }}">
-  <p class="titles">Site URL:</p><input type="text" name="new_url" placeholder="{{ news_name }}">
-  <p class="titles">Editor Forname:</p><input type="text" name="ed_fname" placeholder="{{ ed_fname }}">
-  <p class="titles">Editor Surname:</p><input type="text" name="ed_lname" placeholder="{{ ed_lname }}">
-  <p class="titles">Editor Start Date:</p><input type="text" name="ed_date" placeholder="{{ ed_date }}">
+  <div  class="w3-container" style="opacity: 0.7;">
+    <form action="/sites/{{id}}/edit/" method="POST">
 
-  <p><input type="submit" value="Modify Entry"></p>
-  {% endfor %}
-</form>
+      {% for news_id in edit_list %}
+
+      <p class="titles">Site Name:</p><input type="text" name="new_name" placeholder="{{ site_name }}">
+      <p class="titles">Site URL:</p><input type="text" name="new_url" placeholder="{{ news_name }}">
+      <p class="titles">Editor Forname:</p><input type="text" name="ed_fname" placeholder="{{ ed_fname }}">
+      <p class="titles">Editor Surname:</p><input type="text" name="ed_lname" placeholder="{{ ed_lname }}">
+      <p class="titles">Editor Start Date:</p><input type="text" name="ed_date" placeholder="{{ ed_date }}">
+      <p><input type="submit" value="Modify Entry"></p>
+
+      {% endfor %}
+    </form>
+  </div>
 </div>
-
 
 {% endblock %}
