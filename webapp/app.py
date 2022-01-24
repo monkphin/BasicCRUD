@@ -103,7 +103,6 @@ def delete(id):
 
     if request.method == 'GET':
 
-
         cursor = mysql.connection.cursor()
         cursor.execute(f"SELECT * FROM `sites` WHERE `sites`.`news_id` = '{id}';")
         local_delete_list = cursor.fetchall()

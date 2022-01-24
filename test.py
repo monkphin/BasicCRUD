@@ -19,7 +19,6 @@ class FlaskTest(unittest.TestCase):
         self.assertEqual(statuscode, 200)
         
 
-
     # check if content is html
     def test_home_content(self):
         tester = app.test_client(self)
